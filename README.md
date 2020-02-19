@@ -7,7 +7,6 @@ A custom scrollview implementation for Android that follows drag path and snaps 
  - [Installation](#installation)
  - [Library Details](#library-details)
  - [Usage Examples](#usage-examples)
- - [Sample App](#sample-app)
  - [How to Contribute](#how-to-contribute)
  - [About the Author](#about-the-author)
  - [License](#license)
@@ -86,12 +85,10 @@ A custom scrollview implementation for Android that follows drag path and snaps 
                 } else {
                     snappingScrollView.viewTreeObserver.removeGlobalOnLayoutListener(this)
                 }
-		        // Set the view to be snapped on scrolling
+		    // Set the view to be snapped on scrolling
                 snappingScrollView.setSnappingView(view2)
             }
         })
-
-## Sample App
  
 ## How to Contribute
 
