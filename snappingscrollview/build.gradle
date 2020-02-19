@@ -1,6 +1,23 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.novoda.bintray-release'
+
+
+publish {
+    def groupProjectID = 'com.zebrostudio.snappingscrollview'
+    def artifactProjectID = 'snappingscrollview'
+    def publishVersionID = '1.0.0'
+
+    userOrg = 'abhriyaroy'
+    repoName = 'SnappingScrollView'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'A scrollview for Android that follows drag path and snaps to the top or bottom.'
+    website = 'https://github.com/abhriyaroy/SnappingScrollView'
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
