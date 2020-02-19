@@ -19,6 +19,15 @@ A custom scrollview implementation for Android that follows drag path and snaps 
 ## Samples
   
 ## Installation
+
+[![Download](https://api.bintray.com/packages/abhriyaroy/SnappingScrollView/snappingscrollview/images/download.svg)](https://bintray.com/abhriyaroy/SnappingScrollView/snappingscrollview/_latestVersion)
+
+  Add the dependency in your app module's build.gradle file
+          
+          dependencies {
+		         ...
+	          implementation "com.zebrostudio.snappingscrollview:snappingscrollview:{latest_version}"
+	        }
    
 ## Library Details
 
