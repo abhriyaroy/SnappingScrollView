@@ -9,6 +9,7 @@ import android.view.animation.DecelerateInterpolator
 import androidx.core.widget.NestedScrollView
 
 private const val DELAY_MILLIS = 40L
+private const val SCROLLY_PROPERTY = "scrollY"
 
 class SnappingScrollView : NestedScrollView {
 
@@ -72,11 +73,9 @@ class SnappingScrollView : NestedScrollView {
                 endY = scrollY
                 wasActionMoveStarted = false
                 if ((endY - startY >= 50) && scrollY < offset) {
-                    println("slow smooth scroll")
                     slowSmoothScrollTo(offset.toInt())
                     false
                 } else if ((endY - startY < 50) && scrollY < offset) {
-                    println("slow scroll")
                     smoothScrollTo(0, 0)
                     false
                 } else {
@@ -133,8 +132,7 @@ class SnappingScrollView : NestedScrollView {
     }
 
     private fun slowSmoothScrollTo(scrollTo: Int) {
-        println("smooth scroll to")
-        ObjectAnimator.ofInt(this, "scrollY", scrollY, scrollTo).apply {
+        ObjectAnimator.ofInt(this, SCROLLY_PROPERTY, scrollY, scrollTo).apply {
             duration = 150
             interpolator = DecelerateInterpolator()
         }.start()
