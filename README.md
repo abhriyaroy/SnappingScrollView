@@ -13,6 +13,8 @@ A custom scrollview implementation for Android that follows drag path and snaps 
  - [License](#license)
  
 ## Introduction
+  
+  SnappingScrollView serves as an improvement over the default scrollview implementation of android by bringing `Bottom Sheet` like `snapping` behaviour to the scrollview.
  
 ## Samples
   
@@ -20,11 +22,16 @@ A custom scrollview implementation for Android that follows drag path and snaps 
    
 ## Library Details
 
+  - Extends the scrollview class
+  - Min sdk 15
+  - Written in kotlin
+  - Offers disable scroll helper method
+
 ## Sample App
  
 ## How to Contribute
 
-  Please feel free to raise an issue in-case you come across a bug or even if you have any minor suggestion.
+  Please feel free to raise an Issue/Pr in-case you come across a bug or even if you have any minor suggestion.
 
 ## About the Author
 
