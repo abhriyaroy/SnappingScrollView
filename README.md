@@ -54,7 +54,7 @@ A custom scrollview implementation for Android that follows drag path and snaps 
 
 ## License
 
-    Copyright 2019 Abhriya Roy
+    Copyright 2020 Abhriya Roy
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
