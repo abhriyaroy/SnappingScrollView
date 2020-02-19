@@ -39,6 +39,58 @@ A custom scrollview implementation for Android that follows drag path and snaps 
   - Written in kotlin
   - Offers disable scroll helper method
 
+## Usage Example
+
+  Add to your layout in your `XML` file -
+
+	<com.zebrostudio.snappingscrollview.SnappingScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/snappingScrollView"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:background="@color/colorAccent"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:id="@+id/view2"
+                android:background="@color/colorPrimaryDark"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:background="@color/colorPrimary"/>
+                
+             <!-- Other views -->
+
+        </LinearLayout>
+
+    </com.zebrostudio.snappingscrollview.SnappingScrollView>
+
+  And then in your class file add to you `onCreate()` or any other lifecycle method -
+
+  	snappingScrollView.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+	    	    // Remove the layout listener
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    snappingScrollView.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                } else {
+                    snappingScrollView.viewTreeObserver.removeGlobalOnLayoutListener(this)
+                }
+		        // Set the view to be snapped on scrolling
+                snappingScrollView.setSnappingView(view2)
+            }
+        })
+
 ## Sample App
  
 ## How to Contribute
